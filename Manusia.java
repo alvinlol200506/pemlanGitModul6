@@ -1,4 +1,5 @@
 public class Manusia {
+    // menetapkan instance private untuk class Manusia
     private String nama;
     private boolean jenisKelamin;
     private String nik;
@@ -6,7 +7,8 @@ public class Manusia {
     private double tunjangan;
 
 
-    public Manusia (String nama, String nik, boolean jenisKelamin, boolean menikah){
+    public Manusia (String nama, String nik, boolean jenisKelamin, boolean menikah){ // ini nanti bisa langsung dimasukkan infonya pas di new Manusia
+        // mengisi instance dengan data datanya, btw karena pakai ini saya tidak jadi pakai setter
         this.nama = nama;
         this.nik = nik;
         this.jenisKelamin = jenisKelamin;
@@ -14,20 +16,20 @@ public class Manusia {
     }
 
 
-    public String getNama(){
+    public String getNama(){ // getter nama dengan return namanya
         return nama;
     }
-    public String getJeniskelamin(){
+    public String getJeniskelamin(){ // kalau misalnya jeniskelamin nya true maka akan return String "pria" dan bila false akan "wanita"
         if (jenisKelamin){
             return "pria";
         } else {
             return "wanita";
         }
     }
-    public String getNik(){
+    public String getNik(){ // getter String yang mereturn niknya
         return nik;
     }
-    public String getMenikah(){
+    public String getMenikah(){ // kalau true maka akan return String "sudah menikah" bila false maka akan "belum menikah"
         if (menikah){
             return "sudah menikah";
         } else {
