@@ -38,22 +38,22 @@ public class Manusia {
     }
 
     public double getTunjangan(){
-        if (menikah && jenisKelamin){
+        if (menikah && jenisKelamin){ // bila dia sudah menikah dan pria
             tunjangan = 25;
-        } else if (menikah && !jenisKelamin){
+        } else if (menikah && !jenisKelamin){ // bila dia sudah menikah dan wanita
             tunjangan = 20;
-        } else {
+        } else { // bila dia belum menikah dan gender apapun
             tunjangan = 15;
         }
 
-        return tunjangan;
+        return tunjangan; // mengembalikan nilai double tunjangan tergantung jenis kelamin dan status
     }
 
-    public double getPendapatan(){
+    public double getPendapatan(){ // mereturn double berapa uang hasil tunjangan (karena sumber uangnya hanya tunjangan maka saya hanya isi getTunjangan(), kalau ada lagi bakal ada "+" trus sumber lainnya
         return getTunjangan();
     }
 
-    public String toString(){
+    public String toString(){ // ini adalah method java dimana bila di Main kita print variabel referensinya, maka method ini akan dijalankan
         return "Nama: " + getNama() + "\nNIK: " + getNik() + "\nJenis kelamin: " + getJeniskelamin() +"\nPendapatan: " + getPendapatan();
     }
 }
